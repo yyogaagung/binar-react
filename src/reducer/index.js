@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import loggedReducer from "./IsLogged";
+import toDoReducer from "./toDo";
 import counterReducer from "./Counter";
 
 const allReducer = combineReducers({
     counter : counterReducer,
-    logged : loggedReducer
+    todo : toDoReducer
 });
 
 export default allReducer;
