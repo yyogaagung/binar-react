@@ -16,3 +16,16 @@ export const input = (num) => {
         payload: num * 1
     };
 };
+
+export const addTodo = (value) => {
+    return {
+        type: 'ADDTODO',
+        payload: value
+    };
+};
+export const deleteTodo = (index) => {
+    return {
+        type: 'DELETE/TODO',
+        index
+    };
+};
