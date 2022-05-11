@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {useSelector, useDispatch} from 'react-redux'
 import {increment, decrement, input} from './actions'
+import Post from "./Post";
 
 function App() {
   const counter = useSelector(state => state.counter);
@@ -20,7 +21,6 @@ function App() {
           <button type='submit'>submit</button>
       </form>
       {isLogged ? <h3>Valuable Information I shouldn't see</h3> : ''}
-      
     </div>
   );
 }
