@@ -10,8 +10,11 @@ const toDoReducer= (state = initialState, action) => {
                     todo : [...state.todo, action.payload]
                 }  
         case 'DELETE/TODO':
-            return {
-                todo : state.todo.filter( (item, index) => index !== action.index)
+            const temp = [...state.todo];
+            const result = temp.filter((val, index) => index !== action.index);
+            return { 
+                ...state,               
+                todo : result
             }
         default:
             return state
